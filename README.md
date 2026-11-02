@@ -22,3 +22,22 @@ meet that threshold; it is 0% when no faces are detected.
 - `image_picker` for selecting a photo from the device gallery.
 - `google_mlkit_face_detection` for on-device face detection and smile
   classification.
+
+## Project structure
+
+The face-analysis feature follows a feature-first MVC layout:
+
+```text
+lib/
+  main.dart
+  features/
+    face_analysis/
+      controller/
+      model/
+      view/
+        widgets/
+```
+
+The controller handles gallery selection and ML Kit analysis, the model holds
+the analysis result and derived metrics, and the view contains the screen and
+its presentation widgets.
